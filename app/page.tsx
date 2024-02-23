@@ -10,10 +10,12 @@ import Search from '@/components/Search'
 
 const navigation = [
   { name: 'Search', href: '#search' },
+  { name: 'Locations', href: '#locations' },
+  { name: 'Episodes', href: '#episodes' },
 
 ]
 
-export default function Example() {
+export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -63,7 +65,7 @@ export default function Example() {
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
+              <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 hover:text-green-600 duration-300 text-gray-900">
                 {item.name}
               </a>
             ))}
@@ -97,7 +99,7 @@ export default function Example() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
+                      className="-mx-3 block rounded-lg hover:text-green-600 duration-3 py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
                     >
                       {item.name}
                     </a>
