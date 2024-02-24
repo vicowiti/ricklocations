@@ -64,7 +64,7 @@ export const getNotes = (id: string) => {
 
         const notesData = JSON.parse(ourNotes)
 
-        const notesId = notesData.find(item => item.id === id)
+        const notesId:LocalData[] = notesData.find(item => item.id === id)
 
         if(notesId){
             return notesId.notes || []
