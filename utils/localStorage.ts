@@ -55,24 +55,20 @@ export const createLocalStorage = (data: Data) => {
   }
 };
 
-
 export const getNotes = (id: string) => {
+  const ourNotes = localStorage.getItem("notes");
 
-    const ourNotes = localStorage.getItem("notes")
+  if (ourNotes) {
+    const notesData: LocalData[] = JSON.parse(ourNotes);
 
-    if(ourNotes){
+    const notesId = notesData.find((item) => item.id === id);
 
-        const notesData = JSON.parse(ourNotes)
-
-        const notesId:LocalData[] = notesData.find(item => item.id === id)
-
-        if(notesId){
-            return notesId.notes || []
-        }else{
-            return []
-        }
-        
-    }else{
-        return []
+    if (notesId) {
+      return notesId.notes || [];
+    } else {
+      return [];
     }
-}
+  } else {
+    return [];
+  }
+};
