@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SHAMIRI TEST -  RICK AND MORTY
 
-## Getting Started
+## API SELECTION
 
-First, run the development server:
+- I decided to query the GRAPHQL API instead of the REST one for the project. This is because first, I kind of prefer Graphql due to its conciseness and predictability, quering just the data you need, instead of getting large responses and having to navigate through to isolate the data required.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- The GRAPHQL query system also makes it easier to integrate with typescript, as creation of interfaces and custom types becomes a 
+ breeze. Also the Rick and Morty API has a detailed sandbox that is complete with typescript intergration, making it easy ti visualize the kind of data to query.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+ ## TIME TAKEN
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+ - The task took me 5 working days, I would write some bits in the evenings aafter work. Being a Rick and Morty Fan I was motivated to keep at it, Its a fun show!
 
-## Learn More
+ ## STACK
+ - I used Nextjs, Typescript, tailwind and the Apollo Client to complete the project. The reason for this was because this is the stack that i have used for most of my career. Also it was a good opportunity to use the latest version of Next, that is 14.1 while leveraging the advantages of React, and the speed that Next offers out of the box. I used the Apollo client to handle queries to the Rick and Morty API. The Apollo client being very popular in the community that Facebook's Relay.
 
-To learn more about Next.js, take a look at the following resources:
+ ## DEPLOYMENT
+ - I deployed the project on Vercel on the project is live [here](https://ricklocations.vercel.app).
+ - Vercel was a no brainer because Nextjs is maintained by Vercel and therefore has first class support for Nextjs. Plus it is also free. It makes it a great asset for applications in staging and testing phases.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+ ## NOTES STORAGE
+ - Chose to use Local storage to dsave character notes as it is a simpler way, since the applicaton does not have an authentication system yet. A users, notes stay persisted across tabs.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

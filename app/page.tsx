@@ -72,7 +72,7 @@ export default function Home() {
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-              Log in <span aria-hidden="true">&rarr;</span>
+           
             </a>
           </div>
         </nav>
@@ -110,7 +110,7 @@ export default function Home() {
                     href="#"
                     className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10"
                   >
-                    Log in
+                    
                   </a>
                 </div>
               </div>

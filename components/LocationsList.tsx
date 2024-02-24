@@ -51,8 +51,10 @@ function LocationsList() {
    console.log("currentPage", currentPage)
   const { loading, error, data } = useQuery(GET_LOCATIONS, { variables: { page: currentPage }, client });
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
+  
+
+  if (loading) return <p className='text-center font-bold'>Loading...</p>;
+  if (error) return <p className='text-center font-bold text-red-600'>Error: {error.message}</p>;
 
 
 
