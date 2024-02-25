@@ -46,23 +46,31 @@ interface Char {
 
 }
 
-function LocationsList() {
+interface Props {
+  location: string
+  character: string
+  episode: string
+
+}
+
+function LocationsList(props:Props) {
    const [currentPage, setCurrentPage] = useState(1)
    console.log("currentPage", currentPage)
   const { loading, error, data } = useQuery(GET_LOCATIONS, { variables: { page: currentPage }, client });
 
-  
+ const filteredData = data?.locations.results.filter(item => item.name.toLowerCase().includes(props.location.toLowerCase()))
+  const filteredChars = filteredData?.filter(item => item.residents.some(resident => resident.name.toLowerCase().includes(props.character.toLowerCase())))
 
   if (loading) return <p className='text-center font-bold'>Loading...</p>;
   if (error) return <p className='text-center font-bold text-red-600'>Error: {error.message}</p>;
 
-
+{filteredChars.length < 1 && <p className='text-center font-bold'>No results...</p>}
 
 
   return (
     <div>
       <ul >
-        {data?.locations.results?.map((location: Char) => (
+        {filteredChars?.map((location: Char) => (
         <li key={location.id}>
             <h3 className="text-2xl font-semibold flex items-center gap-3"><FaLocationDot color="green" />{location.name}</h3>
             <h2>Residents</h2>

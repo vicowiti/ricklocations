@@ -17,6 +17,9 @@ const navigation = [
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [location, setLocation] = useState("")
+  const [character, setCharacter] = useState("")
+  const [episode, setEpisode] = useState("")
 
   return (
     <div className="isolate bg-white">
@@ -150,9 +153,9 @@ export default function Home() {
 
             <div className="mt-16 flow-root sm:mt-24">
               <article id="search">
-                <Search />
+                <Search location={location} character={character} setLocation={setLocation}  setCharacter={setCharacter} episode={episode} setEpisode={setEpisode} />
               </article>
-              <LocationsList />
+              <LocationsList location={location} character={character} episode={episode}/>
             </div>
           </div>
           <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">

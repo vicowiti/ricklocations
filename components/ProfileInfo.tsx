@@ -60,32 +60,25 @@ interface Props {
 
 function ProfileInfo(props: Props) {
 
-
   const { loading, error, data } = useQuery(GET_CHARACTER, { variables: { id: props.id }, client });
   const charNotes = getNotes(props.id)
 
   const [stateNotes, setStateNotes] = useState(charNotes)
-  console.log("currentData", data)
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
 
-
-
- 
-
+  if (loading) return <p className="text-center font-bold">Loading...</p>;
+  if (error) return <p className="text-center font-bold">Error: {error.message}</p>;
 
   return (
     <div>
-
-      <article className="flex items-center w-full justify-between p-10 gap-4">
+      <article className="flex flex-col lg:flex-row flex-reverse items-center w-full justify-between lg:justify-between p-10 gap-4">
         <div>
-          <h3 className="text-5xl font-semibold">{data?.character?.name}</h3>
-          <h3 className="text-2xl font-semibold">{data?.character?.status}</h3>
-          <h3 className="text-2xl font-semibold">{data?.character?.species}</h3>
-          <h3 className="text-2xl font-semibold">{data?.character?.gender}</h3>
+          <h3 className="text-5xl font-semibold text-center lg:text-left">{data?.character?.name}</h3>
+          <h3 className="text-2xl font-mono text-center lg:text-left">Status: {data?.character?.status}</h3>
+          <h3 className="text-2xl font-mono text-center lg:text-left">Species: {data?.character?.species}</h3>
+          <h3 className="text-2xl font-mono text-center lg:text-left">Gender:{data?.character?.gender}</h3>
         </div>
         <div>
-          <img src={data?.character?.image} />
+          <img src={data?.character?.image} className="rounded-md" />
         </div>
 
       </article>

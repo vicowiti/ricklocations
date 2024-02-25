@@ -7,12 +7,13 @@ import { FaBars, FaTimes } from 'react-icons/fa'
 import Logo from "../../public/logo.png"
 import Image from 'next/image'
 import ProfileInfo from '@/components/ProfileInfo'
+import Link from 'next/link'
 
 
 const navigation = [
-    { name: 'Search', href: '#search' },
-    { name: 'Locations', href: '#locations' },
-    { name: 'Episodes', href: '#episodes' },
+    
+    { name: 'Notes', href: '#notes' },
+    
 
 ]
 
@@ -65,6 +66,8 @@ export default function Profile({ params }: { params: { id: string } }) {
                         </button>
                     </div>
                     <div className="hidden lg:flex lg:gap-x-12">
+                        <Link href="/" className="text-sm font-semibold leading-6 hover:text-green-600 duration-300 text-gray-900">Home</Link>
+                        <Link href="/" className="text-sm font-semibold leading-6 hover:text-green-600 duration-300 text-gray-900">Home</Link>
                         {navigation.map((item) => (
                             <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 hover:text-green-600 duration-300 text-gray-900">
                                 {item.name}
@@ -73,17 +76,17 @@ export default function Profile({ params }: { params: { id: string } }) {
                     </div>
                     <div className="hidden lg:flex lg:flex-1 lg:justify-end">
                         <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-                            Log in <span aria-hidden="true">&rarr;</span>
+                           
                         </a>
                     </div>
                 </nav>
                 <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
                     <Dialog.Panel className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
                         <div className="flex items-center justify-between">
-                            <a href="#" className="-m-1.5 p-1.5">
+                            <Link href="/" className="-m-1.5 p-1.5">
                                 <span className="sr-only">Your Logo</span>
                                 <Image className="h-8" src={Logo} alt="" />
-                            </a>
+                            </Link>
                             <button
                                 type="button"
                                 className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -96,6 +99,8 @@ export default function Profile({ params }: { params: { id: string } }) {
                         <div className="mt-6 flow-root">
                             <div className="-my-6 divide-y divide-gray-500/10">
                                 <div className="space-y-2 py-6">
+                                    
+                                     <Link href="/" className="-mx-3 block rounded-lg hover:text-green-600 duration-3 py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Home</Link>
                                     {navigation.map((item) => (
                                         <a
                                             key={item.name}
@@ -111,7 +116,7 @@ export default function Profile({ params }: { params: { id: string } }) {
                                         href="#"
                                         className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10"
                                     >
-                                        Log in
+                                        
                                     </a>
                                 </div>
                             </div>

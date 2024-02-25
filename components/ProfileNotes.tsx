@@ -38,7 +38,7 @@ const ProfileNotes = (props: Props) => {
     <div>
       <Toaster richColors />
       <div className="mt-5">
-        <h3>{props.name} Notes</h3>
+        <h3 className="font-bold">{props.name} Notes</h3>
         <div>
           <form onSubmit={e => handleSubmit(e)}>
             <Input required={true} value={note} label="Add a new Note" type="text" onChange={setNote} />
