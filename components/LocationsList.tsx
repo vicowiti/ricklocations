@@ -59,7 +59,7 @@ function LocationsList(props:Props) {
   const { loading, error, data } = useQuery(GET_LOCATIONS, { variables: { page: currentPage }, client });
 
  const filteredData = data?.locations.results.filter((item:any) => item.name.toLowerCase().includes(props.location.toLowerCase()))
-  const filteredChars = filteredData?.filter((item:any) => item.residents.some(resident => resident.name.toLowerCase().includes(props.character.toLowerCase())))
+  const filteredChars = filteredData?.filter((item:any) => item.residents.some((resident:any) => resident.name.toLowerCase().includes(props.character.toLowerCase())))
 
   if (loading) return <p className='text-center font-bold'>Loading...</p>;
   if (error) return <p className='text-center font-bold text-red-600'>Error: {error.message}</p>;
