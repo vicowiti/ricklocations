@@ -72,3 +72,34 @@ export const getNotes = (id: string) => {
     return [];
   }
 };
+
+export const getAllNotes = () => {
+  const ourNotes = localStorage.getItem("notes");
+
+  if (ourNotes) {
+    const notesData: LocalData[] = JSON.parse(ourNotes);
+
+    return notesData
+  }
+};
+
+export const deleteNote = (charIndex: number, noteIndex: number) => {
+  const ourNotes = localStorage.getItem("notes");
+
+  if (ourNotes) {
+    const notesData: LocalData[] = JSON.parse(ourNotes);
+
+    const objectToDelete = notesData[charIndex];
+
+    const newObject = {
+      ...objectToDelete,
+      notes: objectToDelete.notes.splice(noteIndex, 1),
+    };
+
+    notesData[charIndex] = newObject;
+
+    localStorage.setItem("notes", JSON.stringify(notesData));
+
+    return notesData;
+  }
+};

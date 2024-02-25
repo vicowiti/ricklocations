@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Note from "./Note"
 import Input from "./Input"
-import { createLocalStorage } from '@/utils/localStorage'
+import { createLocalStorage, deleteNote } from '@/utils/localStorage'
 import { Toaster, toast } from 'sonner'
 
 interface Props {
@@ -34,6 +34,8 @@ const ProfileNotes = (props: Props) => {
 
 
   }
+
+
   return (
     <div>
       <Toaster richColors />
@@ -49,7 +51,7 @@ const ProfileNotes = (props: Props) => {
         {props.notes.length < 1 && <p className="text center">No Notes Yet!</p>}
         <article>
           {
-            props.notes.map(note => <Note note={note} key={note} />)
+            props.notes.map((note, index) => <Note note={note} AllNotes={props.stateNotes} key={note} index={index} />)
           }
         </article>
       </div>
