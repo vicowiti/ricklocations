@@ -1,5 +1,9 @@
 # SHAMIRI TEST -  RICK AND MORTY
 
+## DESIGN INSPIRATION
+- I decided to go with a simple and clean UI with a subtle Rick and Morty theme. This is considering the volume of data, in characters and Locations, It makes sense not to distract the user and have them engrossed from the get go.
+
+
 ## API SELECTION
 
 - I decided to query the GRAPHQL API instead of the REST one for the project. This is because first, I kind of prefer Graphql due to its conciseness and predictability, quering just the data you need, instead of getting large responses and having to navigate through to isolate the data required.
