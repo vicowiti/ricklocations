@@ -140,9 +140,7 @@ export default function Home() {
                     <FaSearch size={20} />
                     Squanch!
                   </a>
-                  <a href="#" className="text-base font-semibold leading-7 text-gray-900">
-                    Learn more <span aria-hidden="true">→</span>
-                  </a>
+                  
                 </div>
               </div>
               <article className="flex-1 hidden lg:block">

@@ -1,7 +1,7 @@
 # SHAMIRI TEST -  RICK AND MORTY
 
 ## DESIGN INSPIRATION
-- I decided to go with a simple and clean UI with a subtle Rick and Morty theme. This is considering the volume of data, in characters and Locations, It makes sense not to distract the user and have them engrossed from the get go.
+- I decided to go with a simple and clean UI with a subtle Rick and Morty theme. This is considering the volume of data, in characters and Locations, It makes sense not to distract the user and have them engrossed from the get go. The "Squanch" term is a reference to the Rick and Mory universe, it means "Get started".
 
 
 ## API SELECTION
@@ -25,5 +25,6 @@
 
  ## NOTES STORAGE
  - Chose to use Local storage to dsave character notes as it is a simpler way, since the applicaton does not have an authentication system yet. A users, notes stay persisted across tabs.
+ - I also Implemented CRUD actions for notes saved by the user.
 
 

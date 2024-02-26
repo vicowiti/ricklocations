@@ -4,7 +4,7 @@ interface Data {
   note: string;
 }
 
-interface LocalData {
+export interface LocalData {
   name: string;
   id: string;
   notes: string[];

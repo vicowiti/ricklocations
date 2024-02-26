@@ -4,7 +4,8 @@ import { RxAvatar } from "react-icons/rx";
 import { MdDateRange } from "react-icons/md";
 import {PiGenderIntersexFill} from "react-icons/pi"
 import Link from 'next/link';
-import { IoIosBatteryDead } from "react-icons/io";
+import { IoIosBatteryDead, IoIosBatteryFull } from "react-icons/io";
+import { timeConverter } from './../utils/timeConverter';
 
 export interface Resident{
 
@@ -32,8 +33,8 @@ const ResidentCard = ({ resident }: Props) => {
             <div>
                 <p className="flex items-center gap-4"> <RxAvatar color="green"/> {resident.name}</p>
                 <p className="flex items-center gap-4"> <PiGenderIntersexFill color="green"/> {resident.gender}</p>
-                <p className="flex items-center gap-4"><MdDateRange color="green"/> {resident.created}</p>
-                <p className="flex items-center gap-4"><IoIosBatteryDead  color="green"/> {resident.status}</p>
+                <p className="flex items-center gap-4 text-sm"><MdDateRange color="green"/> {timeConverter(resident.created)}</p>
+                <p className="flex items-center gap-4">{resident.status.toLowerCase() === "dead" ? <IoIosBatteryDead  color="green"/> : <IoIosBatteryFull  color="green"/>} {resident.status}</p>
 
             </div>
         </div>

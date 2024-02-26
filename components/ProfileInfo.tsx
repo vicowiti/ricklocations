@@ -98,7 +98,7 @@ function ProfileInfo(props: Props) {
         </div>
 
       </div>
-      <ProfileNotes name={data?.character?.name} stateNotes={stateNotes} setStateNotes={setStateNotes} notes={stateNotes} id={props.id} />
+      <ProfileNotes  name={data?.character?.name} stateNotes={stateNotes} setStateNotes={setStateNotes} notes={stateNotes} id={props.id} />
     </div>
   );
 }

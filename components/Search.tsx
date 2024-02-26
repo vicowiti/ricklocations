@@ -17,9 +17,9 @@ const Search = ({location, setLocation,character, setCharacter, episode, setEpis
     <p className="text-center text-lg text-gray-600">Search your favorite characters, locations and Episodes</p>
     <form id="search" className="p-10 flex items-center w-full justify-center gap-3 flex-col lg:flex-row">
       
-      <Input type='search' label='Location' value={location} onChange={setLocation} />
-      <Input type='search' label='Character' value={character} onChange={setCharacter} />
-      <button className="bg-green-600 text-white" onClick={()=>{
+      <Input  placeholder="Search Location" type='search' label='Location' value={location} onChange={setLocation} />
+      <Input placeholder="Search character" type='search' label='Character' value={character} onChange={setCharacter} />
+      <button className="bg-green-600 text-white px-3 py-3 rounded-lg" onClick={()=>{
         setLocation("")
         setCharacter("")
       }}>Reset</button>

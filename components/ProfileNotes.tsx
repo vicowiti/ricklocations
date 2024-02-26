@@ -43,7 +43,7 @@ const ProfileNotes = (props: Props) => {
         <h3 className="font-bold">{props.name} Notes</h3>
         <div>
           <form onSubmit={e => handleSubmit(e)}>
-            <Input required={true} value={note} label="Add a new Note" type="text" onChange={setNote} />
+            <Input placeholder="Add note" required={true} value={note} label="Add a new Note" type="text" onChange={setNote} />
             <button type="submit" className='bg-green-600 text-white font-semibold px-4 rounded-lg py-2 my-2'>Add Note</button>
           </form>
         </div>
@@ -51,7 +51,7 @@ const ProfileNotes = (props: Props) => {
         {props.notes.length < 1 && <p className="text center">No Notes Yet!</p>}
         <article>
           {
-            props.notes.map((note, index) => <Note note={note} AllNotes={props.stateNotes} key={note} index={index} />)
+            props.notes.map((note, index) => <Note setNote={setNote} id={props.id} note={note} setStateNotes={props.setStateNotes} AllNotes={props.stateNotes} key={note} index={index} />)
           }
         </article>
       </div>
