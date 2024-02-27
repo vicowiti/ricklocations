@@ -30,3 +30,5 @@
 
 ## ADDITIONAL INFO
 - Using react native for a lot of projects lately, I would like to know if a mobile app is in the works for Shamiri, could help even for in house tasks like staff attendance, leave applications etc. I did those for my current company.
+
+-I had a lot of fun working with the notes data, since I was not using a custom state manager like redux toolkit which would have handled array mutations under the hood, I went traditional javascript, creating copies and mutating via the spread operator, being careful to not introduce bugs or corrupt the data. that was a good workout
