@@ -28,3 +28,5 @@
  - I also Implemented CRUD actions for notes saved by the user. A user can create notes, delete Notes, read and update notes on a character.
 
 
+## ADDITIONAL INFO
+- Using react native for a lot of projects lately, I would like to know if a mobile app is in the works for Shamiri, could help even for in house tasks like staff attendance, leave applications etc. I did those for my current company.
