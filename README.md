@@ -25,6 +25,6 @@
 
  ## NOTES STORAGE
  - Chose to use Local storage to dsave character notes as it is a simpler way, since the applicaton does not have an authentication system yet. A users, notes stay persisted across tabs.
- - I also Implemented CRUD actions for notes saved by the user.
+ - I also Implemented CRUD actions for notes saved by the user. A user can create notes, delete Notes, read and update notes on a character.
 
 
